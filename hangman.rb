@@ -1,4 +1,6 @@
-require 'csv'
+#BY: Braeden Smith 2015
+
+#Intro to programming class
 def draw(faults)
   if faults == 7
     puts "
@@ -143,6 +145,7 @@ _________
     puts ""
   elsif faults == "win"
     puts "CONGRATS YOU WON"
+    puts "You guessed " + $wordfinal + " correctly"
     sleep 2
     exit
   end
