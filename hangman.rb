@@ -154,7 +154,7 @@ def inputsan(input)
   if input.downcase == "word"
     puts ""
     puts "What word do you want to guess?"
-		inputw = gets.chomp
+    inputw = gets.chomp
     if inputw.nil? or inputw.empty?
       $message = "Nothing inputed."
       puts ""
