@@ -155,19 +155,17 @@ def inputsan(input)
     puts ""
     puts "What word do you want to guess?"
 		inputw = gets.chomp
-		if inputw.nil? or inputw.empty?
+    if inputw.nil? or inputw.empty?
       $message = "Nothing inputed."
       puts ""
       inputsan("word")
-		elsif inputw[/[a-zA-Z]+/] == inputw && inputw.downcase == $wordfinal
+    elsif inputw[/[a-zA-Z]+/] == inputw && inputw.downcase == $wordfinal
       $message = "Congrats you guessed the right word"
       $faults = "win"
-		#Sanitation Complete
     else
       $message = "Sorry the word is wrong"
       $faults = $faults + 1
       draw($faults)
-
     end
     #inputchk(inputw)
   elsif input[/[a-zA-Z]+/] == input && input.length == 1
