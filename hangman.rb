@@ -17,7 +17,7 @@ _________
     puts
     puts "Used Letters: " + $usedletters.inspect
     puts "Faults: " + $faults.inspect
-    puts "Unknown Word: " + $wordEmptyArray.inspect
+    puts "Unknown Word: " + $wordEmptyArray.join(" ")
     puts ""
     puts "YOU HAVE LOST!"
     puts "The word was: " + $wordfinal
@@ -38,7 +38,7 @@ _________
     puts
     puts "Used Letters: " + $usedletters.inspect
     puts "Faults: " + $faults.inspect
-    puts "Unknown Word: " + $wordEmptyArray.inspect
+    puts "Unknown Word: " + $wordEmptyArray.join(" ")
     puts ""
   elsif faults == 5
     puts "
@@ -55,7 +55,7 @@ _________
     puts
     puts "Used Letters: " + $usedletters.inspect
     puts "Faults: " + $faults.inspect
-    puts "Unknown Word: " + $wordEmptyArray.inspect
+    puts "Unknown Word: " + $wordEmptyArray.join(" ")
     puts ""
   elsif faults == 4
     puts "
@@ -72,7 +72,7 @@ _________
     puts
     puts "Used Letters: " + $usedletters.inspect
     puts "Faults: " + $faults.inspect
-    puts "Unknown Word: " + $wordEmptyArray.inspect
+    puts "Unknown Word: " + $wordEmptyArray.join(" ")
     puts ""
   elsif faults == 3
     puts "
@@ -89,7 +89,7 @@ _________
     puts
     puts "Used Letters: " + $usedletters.inspect
     puts "Faults: " + $faults.inspect
-    puts "Unknown Word: " + $wordEmptyArray.inspect
+    puts "Unknown Word: " + $wordEmptyArray.join(" ")
     puts ""
   elsif faults == 2
     puts "
@@ -106,7 +106,7 @@ _________
     puts
     puts "Used Letters: " + $usedletters.inspect
     puts "Faults: " + $faults.inspect
-    puts "Unknown Word: " + $wordEmptyArray.inspect
+    puts "Unknown Word: " + $wordEmptyArray.join(" ")
     puts ""
   elsif faults == 1
     puts "
@@ -123,7 +123,7 @@ _________
     puts
     puts "Used Letters: " + $usedletters.inspect
     puts "Faults: " + $faults.inspect
-    puts "Unknown Word: " + $wordEmptyArray.inspect
+    puts "Unknown Word: " + $wordEmptyArray.join(" ")
     puts ""
 
   elsif faults == 0
@@ -141,7 +141,7 @@ _________
     puts
     puts "Used Letters: " + $usedletters.inspect
     puts "Faults: " + $faults.inspect
-    puts "Unknown Word: " + $wordEmptyArray.inspect
+    puts "Unknown Word: " + $wordEmptyArray.join(" ")
     puts ""
   elsif faults == "win"
     puts "CONGRATS YOU WON"
@@ -178,7 +178,6 @@ def inputsan(input)
       $usedletters.push(input)
       if $wordFinalArray.include?(input)
         $message = "Success"
-###
         matchLocations = $wordFinalArray.map.with_index{|x, i| i if x == input}.compact
         matchLocations.each { |x|
           $wordEmptyArray.fill(input, x, 1)
